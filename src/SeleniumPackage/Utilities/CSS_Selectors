@@ -1,0 +1,81 @@
+ID
+Id'ler # sembolü ile tanımlanır.
+By.cssSelector("#logout");
+By.cssSelector("a#logout"); --> a tag'ine sahip logout id'sine sahip elemanlar.
+
+CLASSNAME
+By.cssSelector(".center");
+By.cssSelector("p.center"); paragraflar içersindeki center className'ine sahipleri getir.
+
+By.cssSelector("input");
+By.cssSelector("input[type='text']");
+
+VE OPERATORU
+By.cssSelector("input[type='text'][placeholder="First Name"]");
+
+By.cssSelector(input.form-control[type='text']);
+-------------------------------------------------------------------------------------------------------------------------
+*= contains
+^= starts-with
+$= ends-with
+-------------------------------------------------------------------------------------------------------------------------
+input[class *= form] --> sm form-control
+input[class ^= form] --> form-control box
+input[class $= form] --> sm pm form
+-------------------------------------------------------------------------------------------------------------------------
+<div id='profile' class="content-block">
+    <h3>Başlık Buraya Gelecek</h3>
+    <p>Bu, içeriği açıklayan bir paragraf metnidir.</p>
+    <img src="resim.jpg" alt="Açıklama resmi">
+    <span>Ekstra bilgi veya metin buraya gelecek.</span>
+</div>
+
++ bitişik kardeş bulur.
+By.cssSelector("h3 + p") h3'ün hemen ardındaki p'yi getirir.
+
+~ bütün kardeşler arasında aramayı sağlar
+By.cssSelector("p ~ span")
+
+> child ilişkisi
+By.cssSelector("div > p"); div'in çocukları içersindeki p yi getirir.
+By.cssSelector("#profile img");(boşlukta tüm çocuklar anlamına geliyor) id'si profile olan elementin çocuklarından img'yi getir.
+
+-------------------------------------------------------------------------------------------------------------------------
+
+<button type="button" class="submit">submit</button>
+<button type="button" class="add">add</button>
+<input type="text"/>
+<input type="radio"/>
+<input type="email"/>
+
+By.cssSelector("button:not(.submit)") --> buttonlar içersinde .submit class'ına sahip olmayan butonları getir.
+By.cssSelector("input:not(.radio)") --> inputlar içinde .radio class'ına sahip olmayan inputları getir.
+
+
+:nth-child()
+<div id='profile' class="content-block">
+    <h3>Başlık Buraya Gelecek</h3>
+    <p>Bu, içeriği açıklayan bir paragraf metnidir.</p>
+    <img src="resim.jpg" alt="Açıklama resmi">
+    <span>Ekstra bilgi veya metin buraya gelecek.</span>
+    <button type="button" class="submit">submit</button>
+    <button type="button" class="add">add</button>
+    <input type="text"/>
+    <input type="radio"/>
+    <input type="email"/>
+</div>
+
+By.cssSelector("#profile > input:nth:child(2)") profil id li elemanın buton çocukları arasındaki 2. butonu getir.
+
+By.cssSelector("#profile > *:nth:child(3)") profil id'li elemanın tüm çocukları arasındaki 3.elemanı getir.
+
+By.cssSelector("#profile > h5:nth:child(1)") null gelir böyle bir eleman yok.
+
+:nth-last-child() ~ :nth-child()'tan farkı indexi sondan sıralamaya başlıyor.
+
+
+
+
+
+
+

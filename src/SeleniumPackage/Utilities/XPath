@@ -1,0 +1,36 @@
+/XPath id ve css yollarına göre 2ms daha yavaş çalışır.
+
+Absolute XPath--> HTML tag'inden başlayıp kendi tagine kadar çok uzun olan bir path.
+/html[1]/body[1]/div[1]/div[1]/div[1]/div[4]/div[5]/div[1]/div[1]/div[1]/div[1]/div[2]/div[3]/div[2]
+
+Relative XPath --> //span[.='Giriş Yap']
+//div[@id='myAccount']
+
+XPath'in formatı
+//tagname[@attribute = 'Value']
+
+Contains():
+//*[contains(@id,'nav')]  id içersinde nav içeren tüm elementleri arıyor.
+//*[contains(@class,'nav-item mr-4')]
+
+Starts-with:
+//*[starts-with(@id,'message')] id'si message ile başlayan elementler.
+
+Ends-with:
+//*[ends-with(@id,'message')] id'si message ile sonlanana elementler.
+
+OR, AND
+//*[@type='submit' and @name='button']
+
+TEXT()
+//*[text()='Watch the Videos']
+//*[contains(text(),'Watch')]
+
+CHİLD
+//div[@id='main_navbar']//child::?(? yerine hangi çocuga ulaşmak istiyorsan o tag'in ismini ver.)
+
+SBLİNG
+//div[@id='main_navbar']//following-sbling::?(? yerine hangi ardına ulaşmak istiyorsan o tag'in ismini ver.)
+
+INDEX:
+//*[@type='text']//following::input[1]
