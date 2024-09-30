@@ -1,6 +1,7 @@
 package SeleniumPackage;
 
 import SeleniumPackage.Utilities.BaseDriver;
+import SeleniumPackage.Utilities.MyFunctions;
 import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
@@ -19,11 +20,13 @@ public class _14_DoubleClick extends BaseDriver {
 
         action.perform();
 
+        //Nerelerde bekleme süresi koymayı iyi değerlendirmek gerek, herhangi bir yere değil mesela doubleClickMessage'ın görünmesi, hazırlanması biraz zaman alabilir bu sebeple bu mesajdan hemen önce koymak mantıklı.
+        MyFunctions.Wait(2);
         WebElement doubleClickMessage = driver.findElement(By.id("doubleClickMessage"));
 
         Assert.assertTrue("Double Click gerçekleşmedi",doubleClickMessage.isDisplayed());
         WaitAndClose();
-        //3.3 14.dk
+
 
 
    }
