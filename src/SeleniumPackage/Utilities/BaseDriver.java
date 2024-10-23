@@ -12,7 +12,7 @@ public class BaseDriver {
     public static WebDriver driver;
 
 
-    //program çalıştığında static bloğundali kodlar bir kere çalışır ve program kapatılana kadar erişilir.
+    //program çalıştığında static bloğundaki kodlar bir kere çalışır ve program kapatılana kadar erişilir.
     static{
 
         //Logger.getLogger(""): Root logger'ı çağırır(isimsiz logger) ve logger değişkenine atar. Bu logger, uygulamanızda log mesajları oluşturmak için kullanılabilir.
