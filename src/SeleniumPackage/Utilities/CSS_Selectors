@@ -65,11 +65,11 @@ By.cssSelector("input:not(.radio)") --> inputlar içinde .radio class'ına sahip
     <input type="email"/>
 </div>
 
-By.cssSelector("#profile > input:nth:child(2)") profil id li elemanın buton çocukları arasındaki 2. butonu getir.
+By.cssSelector("#profile > input:nth-child(2)") profil id li elemanın buton çocukları arasındaki 2. butonu getir.
 
 By.cssSelector("#profile > *:nth:child(3)") profil id'li elemanın tüm çocukları arasındaki 3.elemanı getir.
 
-By.cssSelector("#profile > h5:nth:child(1)") null gelir böyle bir eleman yok.
+By.cssSelector("#profile > h5:nth-child(1)") null gelir böyle bir eleman yok.
 
 :nth-last-child() ~ :nth-child()'tan farkı indexi sondan sıralamaya başlıyor.
 

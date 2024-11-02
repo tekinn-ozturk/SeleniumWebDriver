@@ -34,3 +34,6 @@ SBLİNG
 
 INDEX:
 //*[@type='text']//following::input[1]
+
+//METHOD
+//*[@onclick='javascriptFonksiyonu()

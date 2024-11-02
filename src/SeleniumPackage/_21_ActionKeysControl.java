@@ -51,6 +51,9 @@ public class _21_ActionKeysControl extends BaseDriver {
         WebElement h1Element = driver.findElement(By.xpath("//h1[.='Search - Ipod']"));
 
         Assert.assertTrue("Search Ettik :)",!h1Element.isDisplayed());
+        // assertTrue'da false dönerse uyarıyı console'a basar.
+        //h1 element görünmüyor mu --> görünüyor ozaman bura false döner.
+
         WaitAndClose();
 
 
